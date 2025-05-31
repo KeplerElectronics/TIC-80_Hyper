@@ -246,6 +246,11 @@ static mrb_value mrb_circb(mrb_state* mrb, mrb_value self)
     return mrb_nil_value();
 }
 
+static mrb_value mrb_achievement(mrb_state* mrb, mrb_value self)
+{
+    return mrb_nil_value();
+}
+
 static mrb_value mrb_elli(mrb_state* mrb, mrb_value self)
 {
     mrb_int x, y, a, b, color;

@@ -135,6 +135,11 @@ void tic_api_memcpy(tic_mem* memory, s32 dst, s32 src, s32 size)
     }
 }
 
+void tic_api_achievement(tic_mem* memory, int value)
+{
+    printf("do steam things");
+}
+
 void tic_api_memset(tic_mem* memory, s32 dst, u8 val, s32 size)
 {
     tic_core* core = (tic_core*)memory;

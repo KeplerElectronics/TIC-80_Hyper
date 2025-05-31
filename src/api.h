@@ -664,6 +664,16 @@ enum
         void,                                                                                                           \
         tic_mem*, float x1, float y1, float x2, float y2, float x3, float y3, u8 color)                                 \
                                                                                                                         \
+    macro(achievement,                                                                                                  \
+        "achievement(name)",                                                                                            \
+                                                                                                                        \
+        "This function calls achievement.",                                                                             \
+        1,                                                                                                              \
+        1,                                                                                                              \
+        0,                                                                                                              \
+        void,                                                                                                           \
+        tic_mem*, int name)                                                                                             \
+                                                                                                                        \
                                                                                                                         \
     macro(ttri,                                                                                                         \
         "ttri(x1 y1 x2 y2 x3 y3 u1 v1 u2 v2 u3 v3 texsrc=0 chromakey=-1 z1=0 z2=0 z3=0)",                               \
@@ -682,7 +692,6 @@ enum
         tic_mem*, float x1, float y1, float x2, float y2, float x3, float y3,                                           \
         float u1, float v1, float u2, float v2, float u3, float v3, tic_texture_src texsrc, u8* colors, s32 count,      \
         float z1, float z2, float z3, bool depth)                                                                       \
-                                                                                                                        \
                                                                                                                         \
     macro(clip,                                                                                                         \
         "clip(x y width height)\nclip()",                                                                               \

@@ -739,6 +739,11 @@ static JSValue js_circb(JSContext *ctx, JSValueConst this_val, s32 argc, JSValue
     return JS_UNDEFINED;
 }
 
+static JSValue js_achievement(JSContext* ctx, JSValueConst this_val, s32 argc, JSValueConst* argv)
+{
+    return JS_UNDEFINED;
+}
+
 static JSValue js_elli(JSContext *ctx, JSValueConst this_val, s32 argc, JSValueConst *argv)
 {
     s32 x = getInteger(ctx, argv[0]);

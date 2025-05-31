@@ -381,6 +381,12 @@ static SQInteger squirrel_circb(HSQUIRRELVM vm)
     return 0;
 }
 
+static SQInteger squirrel_achievement(HSQUIRRELVM vm)
+{
+
+    return 0;
+}
+
 static SQInteger squirrel_elli(HSQUIRRELVM vm)
 {
     SQInteger top = sq_gettop(vm);

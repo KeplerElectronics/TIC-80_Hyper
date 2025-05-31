@@ -534,6 +534,13 @@ s7_pointer scheme_circ(s7_scheme* sc, s7_pointer args)
     core->api.circ(tic, x, y, radius, color);
     return s7_nil(sc);
 }
+
+s7_pointer scheme_achievement(s7_scheme* sc, s7_pointer args)
+{
+
+    return s7_nil(sc);
+}
+
 s7_pointer scheme_circb(s7_scheme* sc, s7_pointer args)
 {
     // circb(x y radius color)

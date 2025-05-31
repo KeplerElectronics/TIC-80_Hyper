@@ -524,6 +524,29 @@ static s32 lua_textri(lua_State* lua)
 
 #endif
 
+static s32 lua_achievement(lua_State* lua)
+{
+
+    s32 top = lua_gettop(lua);
+
+    if (top == 1)
+    {
+        tic_core* core = getLuaCore(lua);
+        tic_mem* tic = (tic_mem*)core;
+
+        s32 name = getLuaNumber(lua, 1);
+
+        core->api.achievement(tic, name);
+    }
+    else
+    {
+        luaL_error(lua, "invalid parameters, achievement(name)\n");
+    }
+
+    return 0;
+}
+
+
 static s32 lua_ttri(lua_State* lua)
 {
     s32 top = lua_gettop(lua);
