@@ -38,33 +38,33 @@ typedef enum
     CHUNK_DUMMY,        // 0
     CHUNK_TILES,        // 1
     CHUNK_SPRITES,      // 2
-    CHUNK_COVER_DEP,    // 3 - deprecated chunk
+    CHUNK_DEFAULT, // 3 - deprecated chunk
     CHUNK_MAP,          // 4
     CHUNK_CODE,         // 5
     CHUNK_FLAGS,        // 6
-    CHUNK_TEMP2,        // 7
-    CHUNK_TEMP3,        // 8
+    CHUNK_SCREEN, // 7
+    CHUNK_BINARY, // 8
     CHUNK_SAMPLES,      // 9
     CHUNK_WAVEFORM,     // 10
-    CHUNK_TEMP4,        // 11
+    CHUNK_LANG, // 11
     CHUNK_PALETTE,      // 12
     CHUNK_PATTERNS_DEP, // 13 - deprecated chunk
     CHUNK_MUSIC,        // 14
     CHUNK_PATTERNS,     // 15
     CHUNK_CODE_ZIP,     // 16
-    CHUNK_DEFAULT,      // 17
-    CHUNK_SCREEN,       // 18
-    CHUNK_BINARY,       // 19
-    CHUNK_LANG,         // 20
+    CHUNK_COVER_DEP,    // 17
+    CHUNK_TEMP2,        // 18
+    CHUNK_TEMP3,        // 19
+    CHUNK_TEMP4,        // 20
 } ChunkType;
 
 typedef struct
 {
 #if RETRO_IS_BIG_ENDIAN
     u32 bank:TIC_BANK_BITS;
-    u32 type:5; // ChunkType
+    u32 type:4; // ChunkType
 #else
-    u32 type:5; // ChunkType
+    u32 type:4; // ChunkType
     u32 bank:TIC_BANK_BITS;
 #endif
     u32 size:TIC_BANKSIZE_BITS; // max chunk size is 64K
