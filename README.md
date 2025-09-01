@@ -1,3 +1,9 @@
+cmake -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=MinSizeRel -DBUILD_SDLGPU=Off -DBUILD_WITH_ALL=Off -DBUILD_PRO=On -DBUILD_STATIC=On ..
+>> $numCPUs = [Environment]::ProcessorCount
+>> mingw32-make "-j$numCPUs"
+
+
+
 [![Build Status](https://github.com/nesbox/TIC-80/workflows/Build/badge.svg)](https://github.com/nesbox/TIC-80/actions?query=workflow%3ABuild)
 
 ![TIC-80](https://tic80.com/img/logo64.png)
